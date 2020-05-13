@@ -1,28 +1,28 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Home from "./homePage/Home"
-import Article from "./articlePage/Article"
-import "./App.scss"
+import Home from "./homePage/Home";
+import Article from "./articlePage/Article";
+import "./App.scss";
 
 export default function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/article">Article</Link>
-            </li>
-          </ul>
+          <div>
+            <Link to="/" className="icon">
+              ICON
+            </Link>
+          </div>
+          <div>
+            <span className="nav-text">
+              Species{" "}
+              <i className="fa fa-angle-double-down" aria-hidden="true"></i>
+            </span>
+            <span className="nav-text">Artwork</span>
+            <span className="nav-text donate">Donate</span>
+          </div>
         </nav>
 
         <Switch>
@@ -34,8 +34,12 @@ export default function App() {
           </Route>
         </Switch>
 
-        <footer>
-          This is a footer.
+        <footer className="text-light">
+          <div className="footer-icon">ICON</div>
+          <div className="footer-details">
+            <div>Copyright © abcd abcdabcd</div>
+            <div>Contact us: +65 8888 8888</div>
+          </div>
         </footer>
       </div>
     </Router>

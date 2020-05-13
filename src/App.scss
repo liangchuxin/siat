@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+$bg-dark-green: #171b1d;
+$text-white: #ffffff;
+$red: #fb7171;
+$darker-red: #d34444;
+$Montserrat: "Montserrat", sans-serif;
+$Worksans: "Work Sans", sans-serif;
+
+html,
+body {
+  font-family: $Worksans;
+  background-color: $bg-dark-green;
+  color: $text-white;
+  font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-family: $Montserrat;
+  font-size: 3.75rem;
+  font-weight: 900;
+  color: $text-white;
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-family: $Montserrat;
+  font-size: 3.75rem;
+  font-weight: 800;
+  color: $text-white;
+  margin-bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  font-family: $Worksans;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $text-white;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.nav-text {
+  font-family: $Montserrat;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: $text-white;
+  padding: 0.5rem 0.8rem;
+  margin: 0 1rem;
+}
+
+nav {
   display: flex;
-  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
   align-items: center;
+  padding: 2rem;
+  z-index: 99;
+}
+
+.icon {
+  text-decoration: none;
+  font-family: $Montserrat;
+  font-size: 1.87rem;
+  color: $text-white;
+}
+
+.donate {
+  border: 1px solid $text-white;
+  border-radius: 0.25rem;
+}
+
+.red-label {
+  font-family: $Montserrat;
+  color: $red;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+footer {
+  width: 100%;
+  padding: 2.56rem 0;
+  font-family: $Montserrat;
+  font-size: 21px;
+  /*
+  background-color: blue;*/
+  line-height: 2.5rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-icon {
+  margin-right: 5.69rem;
+  width: 13.7rem;
+  height: 3.75rem;
+  border: 1px solid $red;
+  color: $red;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3.75rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-details {
+  margin-left: 5.75rem;
 }
