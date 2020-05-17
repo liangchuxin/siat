@@ -17,6 +17,10 @@
 .split-description {
   text-align: center;
   margin: 2.63rem 7.3rem 0;
+  font-family: $Worksans;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $text-white;
 }
 
 /* Control the left-right layout */
@@ -55,18 +59,4 @@
 .line {
   height: 2.38rem;
   border-left: solid $text-white 1px;
-}
-
-/* Background images */
-.elephant {
-  background-image: url("../assets/images/elephant.png");
-}
-.bear {
-  background-image: url("../assets/images/bear.png");
-}
-.rhino {
-  background-image: url("../assets/images/rhino.png");
-}
-.pangolin {
-  background-image: url("../assets/images/pangolin.png");
 }

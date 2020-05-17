@@ -1,26 +1,5 @@
 @import "../App";
 
-.cover-species-container {
-  margin-left: 4.2rem;
-  margin-top: 3.56rem;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: transparent;
-}
-
-.tiger {
-  background-image: url("../assets/images/tiger.png");
-  background-size: cover;
-  margin-top: -3.56rem;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
-}
-
 .readmore {
   background: $darker-red;
   padding: 1rem 0;
@@ -28,33 +7,11 @@
   width: 18.25rem;
   text-align: center;
   border: none;
-}
-
-.button-text {
   font-family: $Montserrat;
   font-size: 1.85rem;
   font-weight: 400;
   color: $text-white;
   text-transform: uppercase;
-}
-
-.b-number {
-  font-family: $Montserrat;
-  font-size: 3.75rem;
-  font-weight: 800;
-  color: $text-white;
-  margin-bottom: -1.3rem;
-}
-
-.species-description {
-  line-height: 2.63rem;
-  width: 35.25rem;
-  margin-top: 4rem;
-}
-
-.info {
-  text-align: right;
-  margin: 4.75rem 4.13rem;
 }
 
 .artwork {

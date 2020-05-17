@@ -1,0 +1,62 @@
+@import "../App";
+
+.article-container {
+  height: 29.37rem;
+  transition: background-color 0.5s;
+  a {
+    text-decoration: none;
+    color: $text-white;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.article-container:hover {
+  background-color: #252829;
+}
+
+.content {
+  width: 54.3%;
+  margin-top: 4.5rem;
+  margin-left: 4.13rem;
+  margin-bottom: 4.44rem;
+  h2 {
+    font-family: $Montserrat;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-top: 0;
+    align-items: flex-end;
+  }
+
+  i {
+    margin-left: 1.5rem;
+  }
+}
+
+.details {
+  font-family: $Montserrat;
+  font-size: 1.5rem;
+  margin-top: 1.75rem;
+  font-weight: 300;
+  b {
+    font-weight: 400;
+  }
+}
+
+.extract {
+  line-height: 2.62rem;
+  margin-top: 2.75rem;
+  font-family: $Worksans;
+  font-weight: 300;
+  font-size: 1.31rem;
+}
+
+.thumb {
+  height: 23.38rem;
+  width: 28.69rem;
+  margin-right: 3.12rem;
+  margin-top: 3rem;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #202629;
+}

@@ -29,52 +29,12 @@ h2 {
   margin-bottom: 0;
 }
 
-p {
-  font-family: $Worksans;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: $text-white;
-}
-
 .text-regular {
   font-weight: 400;
 }
 
 .text-light {
   font-weight: 300;
-}
-
-.nav-text {
-  font-family: $Montserrat;
-  font-size: 1.3rem;
-  font-weight: 400;
-  color: $text-white;
-  padding: 0.5rem 0.8rem;
-  margin: 0 1rem;
-}
-
-nav {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  z-index: 99;
-}
-
-.icon {
-  text-decoration: none;
-  font-family: $Montserrat;
-  font-size: 1.87rem;
-  color: $text-white;
-}
-
-.donate {
-  border: 1px solid $text-white;
-  border-radius: 0.25rem;
 }
 
 .red-label {

@@ -1,32 +1,50 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import Navigation from "./Navigation";
 import Home from "./homePage/Home";
 import Article from "./articlePage/Article";
 import "./App.scss";
+
+export const species = [
+  {
+    name: "Elephants",
+    description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
+    numberLeft: 58,
+    deaths: 63,
+  },
+  {
+    name: "Bears",
+    description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
+    numberLeft: 58,
+    deaths: 63,
+  },
+  {
+    name: "Rhinos",
+    description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
+    numberLeft: 58,
+    deaths: 63,
+  },
+  {
+    name: "Pangolins",
+    description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
+    numberLeft: 58,
+    deaths: 63,
+  },
+  {
+    name: "Tigers",
+    description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
+    numberLeft: 58,
+    deaths: 63,
+  },
+];
 
 export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <div>
-            <Link to="/" className="icon">
-              ICON
-            </Link>
-          </div>
-          <div>
-            <span className="nav-text">
-              Species{" "}
-              <i className="fa fa-angle-double-down" aria-hidden="true"></i>
-            </span>
-            <span className="nav-text">Artwork</span>
-            <span className="nav-text donate">Donate</span>
-          </div>
-        </nav>
-
+        <Navigation />
         <Switch>
-          <Route path="/article">
+          <Route path="/article/:speciesName">
             <Article />
           </Route>
           <Route path="/">
@@ -35,6 +53,7 @@ export default function App() {
         </Switch>
 
         <footer className="text-light">
+          <div></div>
           <div className="footer-icon">ICON</div>
           <div className="footer-details">
             <div>Copyright © abcd abcdabcd</div>
