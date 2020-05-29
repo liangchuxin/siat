@@ -24,29 +24,33 @@ const article = [
     link: "https://google.com",
   },
 ];
-export default class Article extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  componentDidMount() {
-    console.log(props);
-    console.log(props.location.state);
-  }
 
-  render() {
-    return (
-      <div>
-        <FullWidthSpecies
-          key={species[4].name}
-          speciesInfo={species[4]}
-          readMore={false}
-        />
-        <ArticleBlock key={article[0].title} articleInfo={article[0]} />
-        <ArticleBlock key={article[1].title} articleInfo={article[1]} />
-        <div className="more-container">
-          <div className="more">Load More...</div>
-        </div>
+function getSpeciesInfo(url) {
+  var speciesId = getSpeciesId(url);
+  return species.find((s) => s.id === speciesId);
+}
+
+function getSpeciesId(url) {
+  return url.split("/article/")[1];
+}
+
+export default function Article(props) {
+  console.log(props);
+
+  return (
+    <div>
+      <FullWidthSpecies
+        key={getSpeciesId(props.match.url)}
+        speciesInfo={getSpeciesInfo(props.match.url)}
+        readMore={false}
+      />
+
+      {/* work on full-width species */}
+      <ArticleBlock key={article[0].title} articleInfo={article[0]} />
+      <ArticleBlock key={article[1].title} articleInfo={article[1]} />
+      <div className="more-container">
+        <div className="more">Load More...</div>
       </div>
-    );
-  }
+    </div>
+  );
 }

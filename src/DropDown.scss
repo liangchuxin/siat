@@ -1,0 +1,127 @@
+@import "./App";
+
+#menu-backdrop {
+  height: 0;
+  max-height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 97;
+  background-image: url("./assets/images/bg-dark-green.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: height 1s, background-image 0.2s;
+}
+
+#menu-backdrop.active {
+  height: 100vh;
+}
+
+#menu-backdrop.tiger {
+  background-image: url("./assets/images/tiger.png");
+  background-position: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#menu-backdrop.elephant {
+  background-image: url("./assets/images/elephant.png");
+  background-position: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#menu-backdrop.bear {
+  background-image: url("./assets/images/bear.png");
+  background-position: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#menu-backdrop.rhino {
+  background-image: url("./assets/images/rhino.png");
+  background-position: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#menu-backdrop.pangolin {
+  background-image: url("./assets/images/pangolin.png");
+  background-position: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dropdown-main-container {
+  height: 0;
+  padding-left: 4.31rem;
+  position: fixed;
+  display: flex;
+  z-index: 98;
+  height: 100vh;
+  background: transparent;
+  transition: 0.2s;
+  width: 100%;
+  text-decoration: none;
+  .slider.first-of-type {
+    margin-top: 2.5rem;
+  }
+  .slider {
+    margin-top: 1.43rem;
+    overflow: hidden;
+    height: 4.56rem;
+  }
+  h2 {
+    font-weight: 900;
+  }
+}
+.dropdown-main-container.active {
+  background: transparent;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.species-label {
+  margin-top: 11.43rem;
+  font-family: $Montserrat;
+  font-size: 1.87rem;
+  color: $red;
+  height: auto;
+  opacity: 0;
+  transition: 0.5s;
+}
+.species-label.active {
+  opacity: 1;
+}
+
+.slider-text0,
+.slider-text1,
+.slider-text2,
+.slider-text3,
+.slider-text4 {
+  margin-top: 5rem;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 5rem;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 5rem;
+  }
+}

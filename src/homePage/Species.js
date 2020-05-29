@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 // import images
 import elephantBg from "../assets/images/elephant.png";
 import bearBg from "../assets/images/bear.png";
@@ -42,8 +42,9 @@ export default function Species(props) {
     >
       <Link
         to={{
-          pathname: `/article/${props.speciesInfo.name}`,
-          state: { speciesName: props.speciesInfo.name },
+          pathname: `/article/${props.speciesInfo.id}`,
+          speciesId: props.speciesInfo.id,
+          hash: "#top",
         }}
       >
         <div>

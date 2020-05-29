@@ -18,6 +18,12 @@
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
+  button:focus {
+    outline: none;
+  }
+  button:hover {
+    cursor: pointer;
+  }
 }
 
 .species-description {

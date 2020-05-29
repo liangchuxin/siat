@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import "./FullWidthSpecies.scss";
 // import images
 import elephantBg from "../assets/images/elephant.png";
@@ -22,7 +23,6 @@ export default function FullWidthSpecies(props) {
         return tigerBg;
     }
   }
-
   return (
     <div
       className="fullwidth-container"
@@ -35,7 +35,15 @@ export default function FullWidthSpecies(props) {
             {props.speciesInfo.description}
           </p>
           {props.readMore && (
-            <button className="readmore button-text">Read more —</button>
+            <Link
+              to={{
+                pathname: `/article/${props.speciesInfo.id}`,
+                speciesId: props.speciesInfo.id,
+                hash: "#top",
+              }}
+            >
+              <button className="readmore button-text">Read more —</button>
+            </Link>
           )}
         </div>
         <div>
