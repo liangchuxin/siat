@@ -11,6 +11,7 @@ export default class Navigation extends React.Component {
       dropdownMenu: true,
     };
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.refresh = this.refresh.bind(this);
   }
 
   componentDidMount() {
@@ -27,13 +28,20 @@ export default class Navigation extends React.Component {
   }
 
   toggleMenu() {
+    console.log(this.state.dropdownMenu);
     if (this.state.dropdownMenu) {
       console.log("Turn off DropDown");
       this.setState({ dropdownMenu: false });
+      // problem here
+      console.log("dropdownMenu is: " + this.state.dropdownMenu);
     } else {
       console.log("Turn on DropDown");
       this.setState({ dropdownMenu: true });
     }
+  }
+
+  refresh() {
+    window.location.reload();
   }
 
   render() {
@@ -41,7 +49,7 @@ export default class Navigation extends React.Component {
       <>
         <nav className={this.state.isTop ? "up" : "down"}>
           <div>
-            <Link to="/#top" className="icon" hash="#top">
+            <Link to="/" onClick={this.refresh} className="icon" hash="#top">
               ICON
             </Link>
           </div>
@@ -53,7 +61,9 @@ export default class Navigation extends React.Component {
               Species{" "}
               <i className="fa fa-angle-double-down" aria-hidden="true"></i>
             </span>
-            <span className="nav-text">Artwork</span>
+            <Link to="/#art" hash="#art">
+              <span className="nav-text">Artwork</span>
+            </Link>
             <span className="nav-text donate">Donate</span>
           </div>
         </nav>

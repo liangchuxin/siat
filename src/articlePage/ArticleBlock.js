@@ -8,7 +8,7 @@ export default function ArticleBlock(props) {
         <div className="content">
           <h2>
             {props.articleInfo.title}{" "}
-            <i class="fa fa-external-link" aria-hidden="true"></i>
+            <i className="fa fa-external-link" aria-hidden="true"></i>
           </h2>
 
           <p className="details">

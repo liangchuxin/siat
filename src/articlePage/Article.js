@@ -33,6 +33,7 @@ function getSpeciesInfo(url) {
 function getSpeciesId(url) {
   return url.split("/article/")[1];
 }
+// console.log(props.match.url);
 
 export default function Article(props) {
   console.log(props);

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./DropDown.scss";
+import { species } from "./App";
 
 function activate() {
   var elem = document.getElementById("menu-backdrop");
@@ -24,25 +25,7 @@ function activate() {
     //   } else {
   }
 }
-function close() {
-  var elem = document.getElementById("menu-backdrop");
-  var label = document.getElementsByClassName("species-label")[0];
-  var button = document.getElementsByClassName("dropdown-button")[0];
-  elem.style.transitionDelay = "0.3s";
-  label.style.transitionDelay = "0.5s";
-  elem.classList.remove("active");
-  label.classList.remove("active");
-  button.innerHTML =
-    'Species <i class="fa fa-angle-double-down" aria-hidden="true"></i>';
-  var num = document.getElementsByClassName("slider").length;
-  for (var count = 0; count < num; count++) {
-    var classname = "slider-text" + count.toString(10);
-    var item = document.getElementsByClassName(classname)[0];
-    item.style.marginTop = "0rem";
-    item.style.animationName = "slide-down";
-    item.style.animationDelay = (count * -120 + 600).toString(10) + "ms";
-  }
-}
+
 //   var animate = document.getElementsByClassName("slider");
 //   var num = animate.length;
 //   var items = document.querySelectorAll(".slider h2");
@@ -55,14 +38,15 @@ export default class DropDown extends React.Component {
     super(props);
     this.updateBackground = this.updateBackground.bind(this);
     this.fade = this.fade.bind(this);
+    this.close = this.close.bind(this);
   }
 
-  componentWillReceiveProps() {
+  componentWillReceiveProps(nextProps) {
     console.log("DropDown: props.open", this.props.open);
-    if (this.props.open) {
+    if (nextProps.open !== this.props.open && this.props.open) {
       activate();
-    } else {
-      close();
+    } else if (nextProps.open !== this.props.open && !this.props.open) {
+      this.close(null);
     }
   }
 
@@ -76,6 +60,49 @@ export default class DropDown extends React.Component {
       document
         .getElementsByClassName("Dropdown-main-container")[0]
         .classList.add("active");
+    }
+  }
+
+  close(e) {
+    if (e) {
+      let species = e.target.innerText;
+      var backdrop = document.getElementById("menu-backdrop");
+      switch (species) {
+        case "Tigers":
+          backdrop.classList.remove("tiger");
+          break;
+        case "Elephants":
+          backdrop.classList.remove("elephant");
+          break;
+        case "Bears":
+          backdrop.classList.remove("bear");
+          break;
+        case "Rhinos":
+          backdrop.classList.remove("rhino");
+          break;
+        case "Pangolins":
+          backdrop.classList.remove("pangolin");
+          break;
+        default:
+          break;
+      }
+    }
+    var elem = document.getElementById("menu-backdrop");
+    var label = document.getElementsByClassName("species-label")[0];
+    var button = document.getElementsByClassName("dropdown-button")[0];
+    elem.style.transitionDelay = "0.3s";
+    label.style.transitionDelay = "0.5s";
+    elem.classList.remove("active");
+    label.classList.remove("active");
+    button.innerHTML =
+      'Species <i class="fa fa-angle-double-down" aria-hidden="true"></i>';
+    var num = document.getElementsByClassName("slider").length;
+    for (var count = 0; count < num; count++) {
+      var classname = "slider-text" + count.toString(10);
+      var item = document.getElementsByClassName(classname)[0];
+      item.style.marginTop = "0rem";
+      item.style.animationName = "slide-down";
+      item.style.animationDelay = (count * -120 + 600).toString(10) + "ms";
     }
   }
 
@@ -132,14 +159,15 @@ export default class DropDown extends React.Component {
             </div>
             <div className="first-of-type slider">
               <Link
+                className="link"
                 to={{
-                  pathname: `/article/tigers`,
-                  speciesId: "tiger",
+                  pathname: `/article/${species[4].id}`,
+                  speciesId: species[4].id,
                   hash: "#top",
                 }}
               >
                 <h2
-                  onClick={close}
+                  onClick={this.close}
                   onMouseEnter={this.updateBackground}
                   onMouseLeave={this.updateBackground}
                   className="slider-text0"
@@ -149,45 +177,81 @@ export default class DropDown extends React.Component {
               </Link>
             </div>
             <div className="slider">
-              <h2
-                onClick={close}
-                onMouseEnter={this.updateBackground}
-                onMouseLeave={this.updateBackground}
-                className="slider-text1"
+              <Link
+                className="link"
+                to={{
+                  pathname: `/article/${species[0].id}`,
+                  speciesId: species[0].id,
+                  hash: "#top",
+                }}
               >
-                Elephants
-              </h2>
+                <h2
+                  onClick={this.close}
+                  onMouseEnter={this.updateBackground}
+                  onMouseLeave={this.updateBackground}
+                  className="slider-text1"
+                >
+                  Elephants
+                </h2>
+              </Link>
             </div>
             <div className="slider">
-              <h2
-                onClick={close}
-                onMouseEnter={this.updateBackground}
-                onMouseLeave={this.updateBackground}
-                className="slider-text2"
+              <Link
+                className="link"
+                to={{
+                  pathname: `/article/${species[1].id}`,
+                  speciesId: species[1].id,
+                  hash: "#top",
+                }}
               >
-                Bears
-              </h2>
+                <h2
+                  onClick={this.close}
+                  onMouseEnter={this.updateBackground}
+                  onMouseLeave={this.updateBackground}
+                  className="slider-text2"
+                >
+                  Bears
+                </h2>
+              </Link>
             </div>
 
             <div className="slider">
-              <h2
-                onClick={close}
-                onMouseEnter={this.updateBackground}
-                onMouseLeave={this.updateBackground}
-                className="slider-text3"
+              <Link
+                className="link"
+                to={{
+                  pathname: `/article/${species[2].id}`,
+                  speciesId: species[2].id,
+                  hash: "#top",
+                }}
               >
-                Rhinos
-              </h2>
+                <h2
+                  onClick={this.close}
+                  onMouseEnter={this.updateBackground}
+                  onMouseLeave={this.updateBackground}
+                  className="slider-text3"
+                >
+                  Rhinos
+                </h2>
+              </Link>
             </div>
             <div className="slider">
-              <h2
-                onClick={close}
-                onMouseEnter={this.updateBackground}
-                onMouseLeave={this.updateBackground}
-                className="slider-text4"
+              <Link
+                className="link"
+                to={{
+                  pathname: `/article/${species[3].id}`,
+                  speciesId: species[3].id,
+                  hash: "#top",
+                }}
               >
-                Pangolins
-              </h2>
+                <h2
+                  onClick={this.close}
+                  onMouseEnter={this.updateBackground}
+                  onMouseLeave={this.updateBackground}
+                  className="slider-text4"
+                >
+                  Pangolins
+                </h2>
+              </Link>
             </div>
           </div>
         </div>

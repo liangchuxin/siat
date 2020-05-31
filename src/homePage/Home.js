@@ -20,7 +20,7 @@ export default function Home() {
         <Species key={species[0].name} speciesInfo={species[0]} />
         <Species key={species[1].name} speciesInfo={species[1]} />
       </div>
-      <div className="artwork">
+      <div className="artwork" id="art">
         <div>
           <h2 className="artwork-title">Artwork by Jessica and Elyse</h2>
           <p className="artwork-description">
