@@ -19,35 +19,35 @@
 }
 
 #menu-backdrop.tiger {
-  background-image: url("./assets/images/tiger.png");
+  background-image: url("./assets/images/tiger-fullwidth.png");
   background-position: center;
 
   background-size: cover;
   background-repeat: no-repeat;
 }
 #menu-backdrop.elephant {
-  background-image: url("./assets/images/elephant.png");
+  background-image: url("./assets/images/elephant-fullwidth.png");
   background-position: center;
 
   background-size: cover;
   background-repeat: no-repeat;
 }
 #menu-backdrop.bear {
-  background-image: url("./assets/images/bear.png");
+  background-image: url("./assets/images/bear-fullwidth.png");
   background-position: center;
 
   background-size: cover;
   background-repeat: no-repeat;
 }
 #menu-backdrop.rhino {
-  background-image: url("./assets/images/rhino.png");
+  background-image: url("./assets/images/rhino-fullwidth.png");
   background-position: center;
 
   background-size: cover;
   background-repeat: no-repeat;
 }
 #menu-backdrop.pangolin {
-  background-image: url("./assets/images/pangolin.png");
+  background-image: url("./assets/images/pangolin-fullwidth.png");
   background-position: center;
 
   background-size: cover;
@@ -105,6 +105,19 @@
   margin-top: 5rem;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
+}
+
+.slider-text0.active,
+.slider-text1.active,
+.slider-text2.active,
+.slider-text3.active,
+.slider-text4.active {
+  color: $text-white !important;
+  transition: color 1s;
+}
+
+.fade-text.fade-active h2 {
+  color: rgba(256, 256, 256, 0.6);
 }
 
 @keyframes slide-up {

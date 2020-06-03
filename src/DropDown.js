@@ -127,6 +127,10 @@ export default class DropDown extends React.Component {
           backdrop.classList.add("pangolin");
           break;
       }
+      var slider = e.target;
+      slider.classList.add("active");
+      var fadetext = document.getElementsByClassName("fade-text")[0];
+      fadetext.classList.add("fade-active");
     } else {
       switch (species) {
         case "Tigers":
@@ -145,6 +149,10 @@ export default class DropDown extends React.Component {
           backdrop.classList.remove("pangolin");
           break;
       }
+      var slider = e.target;
+      slider.classList.remove("active");
+      var fadetext = document.getElementsByClassName("fade-text")[0];
+      fadetext.classList.remove("fade-active");
     }
   }
 
@@ -157,101 +165,103 @@ export default class DropDown extends React.Component {
             <div className="species-label">
               <div>Species —</div>
             </div>
-            <div className="first-of-type slider">
-              <Link
-                className="link"
-                to={{
-                  pathname: `/article/${species[4].id}`,
-                  speciesId: species[4].id,
-                  hash: "#top",
-                }}
-              >
-                <h2
-                  onClick={this.close}
-                  onMouseEnter={this.updateBackground}
-                  onMouseLeave={this.updateBackground}
-                  className="slider-text0"
+            <div className="fade-text">
+              <div className="first-of-type slider">
+                <Link
+                  className="link"
+                  to={{
+                    pathname: `/article/${species[4].id}`,
+                    speciesId: species[4].id,
+                    hash: "#top",
+                  }}
                 >
-                  Tigers
-                </h2>
-              </Link>
-            </div>
-            <div className="slider">
-              <Link
-                className="link"
-                to={{
-                  pathname: `/article/${species[0].id}`,
-                  speciesId: species[0].id,
-                  hash: "#top",
-                }}
-              >
-                <h2
-                  onClick={this.close}
-                  onMouseEnter={this.updateBackground}
-                  onMouseLeave={this.updateBackground}
-                  className="slider-text1"
+                  <h2
+                    onClick={this.close}
+                    onMouseEnter={this.updateBackground}
+                    onMouseLeave={this.updateBackground}
+                    className="slider-text0"
+                  >
+                    Tigers
+                  </h2>
+                </Link>
+              </div>
+              <div className="slider">
+                <Link
+                  className="link"
+                  to={{
+                    pathname: `/article/${species[0].id}`,
+                    speciesId: species[0].id,
+                    hash: "#top",
+                  }}
                 >
-                  Elephants
-                </h2>
-              </Link>
-            </div>
-            <div className="slider">
-              <Link
-                className="link"
-                to={{
-                  pathname: `/article/${species[1].id}`,
-                  speciesId: species[1].id,
-                  hash: "#top",
-                }}
-              >
-                <h2
-                  onClick={this.close}
-                  onMouseEnter={this.updateBackground}
-                  onMouseLeave={this.updateBackground}
-                  className="slider-text2"
+                  <h2
+                    onClick={this.close}
+                    onMouseEnter={this.updateBackground}
+                    onMouseLeave={this.updateBackground}
+                    className="slider-text1"
+                  >
+                    Elephants
+                  </h2>
+                </Link>
+              </div>
+              <div className="slider">
+                <Link
+                  className="link"
+                  to={{
+                    pathname: `/article/${species[1].id}`,
+                    speciesId: species[1].id,
+                    hash: "#top",
+                  }}
                 >
-                  Bears
-                </h2>
-              </Link>
-            </div>
+                  <h2
+                    onClick={this.close}
+                    onMouseEnter={this.updateBackground}
+                    onMouseLeave={this.updateBackground}
+                    className="slider-text2"
+                  >
+                    Bears
+                  </h2>
+                </Link>
+              </div>
 
-            <div className="slider">
-              <Link
-                className="link"
-                to={{
-                  pathname: `/article/${species[2].id}`,
-                  speciesId: species[2].id,
-                  hash: "#top",
-                }}
-              >
-                <h2
-                  onClick={this.close}
-                  onMouseEnter={this.updateBackground}
-                  onMouseLeave={this.updateBackground}
-                  className="slider-text3"
+              <div className="slider">
+                <Link
+                  className="link"
+                  to={{
+                    pathname: `/article/${species[2].id}`,
+                    speciesId: species[2].id,
+                    hash: "#top",
+                  }}
                 >
-                  Rhinos
-                </h2>
-              </Link>
-            </div>
-            <div className="slider">
-              <Link
-                className="link"
-                to={{
-                  pathname: `/article/${species[3].id}`,
-                  speciesId: species[3].id,
-                  hash: "#top",
-                }}
-              >
-                <h2
-                  onClick={this.close}
-                  onMouseEnter={this.updateBackground}
-                  onMouseLeave={this.updateBackground}
-                  className="slider-text4"
+                  <h2
+                    onClick={this.close}
+                    onMouseEnter={this.updateBackground}
+                    onMouseLeave={this.updateBackground}
+                    className="slider-text3"
+                  >
+                    Rhinos
+                  </h2>
+                </Link>
+              </div>
+              <div className="slider">
+                <Link
+                  className="link"
+                  to={{
+                    pathname: `/article/${species[3].id}`,
+                    speciesId: species[3].id,
+                    hash: "#top",
+                  }}
                 >
-                  Pangolins
-                </h2>
-              </Link>
+                  <h2
+                    onClick={this.close}
+                    onMouseEnter={this.updateBackground}
+                    onMouseLeave={this.updateBackground}
+                    className="slider-text4"
+                  >
+                    Pangolins
+                  </h2>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

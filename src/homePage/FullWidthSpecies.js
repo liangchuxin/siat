@@ -2,11 +2,11 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./FullWidthSpecies.scss";
 // import images
-import elephantBg from "../assets/images/elephant.png";
-import bearBg from "../assets/images/bear.png";
-import rhinoBg from "../assets/images/rhino.png";
-import panBg from "../assets/images/pangolin.png";
-import tigerBg from "../assets/images/tiger.png";
+import elephantBg from "../assets/images/elephant-fullwidth.png";
+import bearBg from "../assets/images/bear-fullwidth.png";
+import rhinoBg from "../assets/images/rhino-fullwidth.png";
+import panBg from "../assets/images/pangolin-fullwidth.png";
+import tigerBg from "../assets/images/tiger-fullwidth.png";
 
 export default function FullWidthSpecies(props) {
   function getBgImage(speciesName) {
