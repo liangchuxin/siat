@@ -3,29 +3,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./DropDown.scss";
 import { species } from "./App";
 
-function activate() {
-  var elem = document.getElementById("menu-backdrop");
-  var label = document.getElementsByClassName("species-label")[0];
-  var button = document.getElementsByClassName("dropdown-button")[0];
-  //   if (elem.classList.length < 1) {
-  elem.style.transitionDelay = "0s";
-  label.style.transitionDelay = "0s";
-  elem.classList.add("active");
-  label.classList.add("active");
-  button.innerHTML =
-    'Close <i class="fa fa-angle-double-up" aria-hidden="true"></i>';
-  var num = document.getElementsByClassName("slider").length;
-  for (var count = 0; count < num; count++) {
-    var classname = "slider-text" + count.toString(10);
-    var item = document.getElementsByClassName(classname)[0];
-    item.style.marginTop = "5rem";
-    item.style.animationName = "slide-up";
-    item.style.animationDelay = (count * 120 + 300).toString(10) + "ms";
-    // }
-    //   } else {
-  }
-}
-
 //   var animate = document.getElementsByClassName("slider");
 //   var num = animate.length;
 //   var items = document.querySelectorAll(".slider h2");
@@ -39,12 +16,13 @@ export default class DropDown extends React.Component {
     this.updateBackground = this.updateBackground.bind(this);
     this.fade = this.fade.bind(this);
     this.close = this.close.bind(this);
+    this.activate = this.activate.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     console.log("DropDown: props.open", this.props.open);
     if (nextProps.open !== this.props.open && this.props.open) {
-      activate();
+      this.activate(null);
     } else if (nextProps.open !== this.props.open && !this.props.open) {
       this.close(null);
     }
@@ -63,6 +41,28 @@ export default class DropDown extends React.Component {
     }
   }
 
+  activate() {
+    var elem = document.getElementById("menu-backdrop");
+    var label = document.getElementsByClassName("species-label")[0];
+    var button = document.getElementsByClassName("dropdown-button")[0];
+    //   if (elem.classList.length < 1) {
+    elem.style.transitionDelay = "0s";
+    label.style.transitionDelay = "0s";
+    elem.classList.add("active");
+    label.classList.add("active");
+    button.innerHTML =
+      'Close <i class="fa fa-angle-double-up" aria-hidden="true"></i>';
+    var num = document.getElementsByClassName("slider").length;
+    for (var count = 0; count < num; count++) {
+      var classname = "slider-text" + count.toString(10);
+      var item = document.getElementsByClassName(classname)[0];
+      item.style.marginTop = "5rem";
+      item.style.animationName = "slide-up";
+      item.style.animationDelay = (count * 120 + 300).toString(10) + "ms";
+      // }
+      //   } else {
+    }
+  }
   close(e) {
     if (e) {
       let species = e.target.innerText;
@@ -104,6 +104,7 @@ export default class DropDown extends React.Component {
       item.style.animationName = "slide-down";
       item.style.animationDelay = (count * -120 + 600).toString(10) + "ms";
     }
+    this.props.setMenuOff();
   }
 
   updateBackground(e) {
