@@ -11,6 +11,9 @@ nav {
   padding: 2rem;
   z-index: 100;
   transition: 0.2s;
+  a {
+    text-decoration: none;
+  }
   span:hover {
     cursor: pointer;
   }

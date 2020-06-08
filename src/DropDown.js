@@ -42,6 +42,9 @@ export default class DropDown extends React.Component {
   }
 
   activate() {
+    document.getElementsByClassName(
+      "dropdown-main-container"
+    )[0].style.display = "flex";
     var elem = document.getElementById("menu-backdrop");
     var label = document.getElementsByClassName("species-label")[0];
     var button = document.getElementsByClassName("dropdown-button")[0];
@@ -104,6 +107,9 @@ export default class DropDown extends React.Component {
       item.style.animationName = "slide-down";
       item.style.animationDelay = (count * -120 + 600).toString(10) + "ms";
     }
+    document.getElementsByClassName(
+      "dropdown-main-container"
+    )[0].style.display = "none";
     this.props.setMenuOff();
   }
 

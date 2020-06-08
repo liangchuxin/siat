@@ -1,29 +1,10 @@
+import axios from "axios";
 import React from "react";
 import "./Article.scss";
 import FullWidthSpecies from "../homePage/FullWidthSpecies";
 import ArticleBlock from "./ArticleBlock";
 import { species } from "../App";
-
-const article = [
-  {
-    title: "Title of Article",
-    author: "Celia",
-    date: "June 5",
-    extract:
-      "Lorem ipsum dolor sit amet, tritani efficiantur sit cu, dicunt theophrastus eam ne, quot deleniti reformidans ut mei. Iudico impetus quot deleniti reformidans ut mei. definiebas sea. Duis qualisque interpretaris qui in, aeterno omittam his ea. Cu mei placerat pertinacia consetetur, vis at erat accus.",
-    thumb: "https://i.loli.net/2020/05/14/jCcMtHsW3NaoElL.png",
-    link: "https://baidu.com",
-  },
-  {
-    title: "Title of Article 2",
-    author: "Jack",
-    date: "June 4",
-    extract:
-      "Lorem ipsum dolor sit amet, tritani efficiantur sit cu, dicunt theophrastus eam ne, quot deleniti reformidans ut mei. Iudico impetus quot deleniti reformidans ut mei. definiebas sea. Duis qualisque interpretaris qui in, aeterno omittam his ea. Cu mei placerat pertinacia consetetur, vis at erat accus.",
-    thumb: "https://i.loli.net/2020/05/14/jCcMtHsW3NaoElL.png",
-    link: "https://google.com",
-  },
-];
+import getArticleList from "./webCrawler.js";
 
 function getSpeciesInfo(url) {
   var speciesId = getSpeciesId(url);
@@ -35,23 +16,49 @@ function getSpeciesId(url) {
 }
 // console.log(props.match.url);
 
-export default function Article(props) {
-  console.log(props);
+export default class Article extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { article: [] };
+  }
 
-  return (
-    <div>
-      <FullWidthSpecies
-        key={getSpeciesId(props.match.url)}
-        speciesInfo={getSpeciesInfo(props.match.url)}
-        readMore={false}
-      />
+  componentDidMount() {
+    axios
+      .get(
+        `http://api.serpstack.com/search?access_key=8869dd9d5c93b9c45044f7776c869198&sort=date&query=illegal+trade+wildlife+${getSpeciesId(
+          this.props.match.url
+        )}`
+      )
+      .then((response) => {
+        // `response` is an HTTP response object, whose body is contained in it's `data` attribute
+        // This will print the HTML source code to the console
+        this.setState({
+          article: response.data.organic_results,
+        });
+        console.log(response.data);
+        console.log(this.state.article);
+      })
+      .catch((error) => {
+        alert(`${error}`);
+      });
+  }
 
-      {/* work on full-width species */}
-      <ArticleBlock key={article[0].title} articleInfo={article[0]} />
-      <ArticleBlock key={article[1].title} articleInfo={article[1]} />
-      <div className="more-container">
-        <div className="more">Load More...</div>
+  render() {
+    return (
+      <div>
+        <FullWidthSpecies
+          key={getSpeciesId(this.props.match.url)}
+          speciesInfo={getSpeciesInfo(this.props.match.url)}
+          readMore={false}
+        />
+
+        {this.state.article.map((article) => {
+          return <ArticleBlock key={article.title} articleInfo={article} />;
+        })}
+        <div className="more-container">
+          <div className="more">Load More...</div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
