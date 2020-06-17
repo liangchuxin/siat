@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/siat/static/css/main.a9769f21.chunk.css",
+    "main.js": "/siat/static/js/main.f13d5dc7.chunk.js",
+    "main.js.map": "/siat/static/js/main.f13d5dc7.chunk.js.map",
+    "runtime-main.js": "/siat/static/js/runtime-main.6111a0e6.js",
+    "runtime-main.js.map": "/siat/static/js/runtime-main.6111a0e6.js.map",
+    "static/js/2.abe0ede4.chunk.js": "/siat/static/js/2.abe0ede4.chunk.js",
+    "static/js/2.abe0ede4.chunk.js.map": "/siat/static/js/2.abe0ede4.chunk.js.map",
+    "index.html": "/siat/index.html",
+    "precache-manifest.b64d204ed03a32666cda80be752055ee.js": "/siat/precache-manifest.b64d204ed03a32666cda80be752055ee.js",
+    "service-worker.js": "/siat/service-worker.js",
+    "static/css/main.a9769f21.chunk.css.map": "/siat/static/css/main.a9769f21.chunk.css.map",
+    "static/js/2.abe0ede4.chunk.js.LICENSE.txt": "/siat/static/js/2.abe0ede4.chunk.js.LICENSE.txt",
+    "static/media/DropDown.scss": "/siat/static/media/tiger-fullwidth.e3dcc9d6.png",
+    "static/media/bear.png": "/siat/static/media/bear.2195ef89.png",
+    "static/media/elephant.png": "/siat/static/media/elephant.80d94b82.png",
+    "static/media/pangolin.png": "/siat/static/media/pangolin.1a57413d.png",
+    "static/media/rhino.png": "/siat/static/media/rhino.398ff08a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6111a0e6.js",
+    "static/js/2.abe0ede4.chunk.js",
+    "static/css/main.a9769f21.chunk.css",
+    "static/js/main.f13d5dc7.chunk.js"
+  ]
+}
