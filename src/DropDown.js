@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "./DropDown.scss";
 import { species } from "./App";
 
@@ -19,7 +20,7 @@ export default class DropDown extends React.Component {
     this.activate = this.activate.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(nextProps) {
     console.log("DropDown: props.open", this.props.open);
     if (nextProps.open !== this.props.open && this.props.open) {
       this.activate(null);
@@ -107,10 +108,12 @@ export default class DropDown extends React.Component {
       item.style.animationName = "slide-down";
       item.style.animationDelay = (count * -120 + 600).toString(10) + "ms";
     }
-    document.getElementsByClassName(
-      "dropdown-main-container"
-    )[0].style.display = "none";
     this.props.setMenuOff();
+    setTimeout(function () {
+      document.getElementsByClassName(
+        "dropdown-main-container"
+      )[0].style.display = "none";
+    }, 2000);
   }
 
   updateBackground(e) {
@@ -177,9 +180,8 @@ export default class DropDown extends React.Component {
                 <Link
                   className="link"
                   to={{
-                    pathname: `/article/${species[4].id}`,
+                    pathname: `/article/${species[4].id}/#top`,
                     speciesId: species[4].id,
-                    hash: "#top",
                   }}
                 >
                   <h2
@@ -196,9 +198,8 @@ export default class DropDown extends React.Component {
                 <Link
                   className="link"
                   to={{
-                    pathname: `/article/${species[0].id}`,
+                    pathname: `/article/${species[0].id}/#top`,
                     speciesId: species[0].id,
-                    hash: "#top",
                   }}
                 >
                   <h2
@@ -215,9 +216,8 @@ export default class DropDown extends React.Component {
                 <Link
                   className="link"
                   to={{
-                    pathname: `/article/${species[1].id}`,
+                    pathname: `/article/${species[1].id}/#top`,
                     speciesId: species[1].id,
-                    hash: "#top",
                   }}
                 >
                   <h2
@@ -235,9 +235,8 @@ export default class DropDown extends React.Component {
                 <Link
                   className="link"
                   to={{
-                    pathname: `/article/${species[2].id}`,
+                    pathname: `/article/${species[2].id}/#top`,
                     speciesId: species[2].id,
-                    hash: "#top",
                   }}
                 >
                   <h2
@@ -254,9 +253,8 @@ export default class DropDown extends React.Component {
                 <Link
                   className="link"
                   to={{
-                    pathname: `/article/${species[3].id}`,
+                    pathname: `/article/${species[3].id}/#top`,
                     speciesId: species[3].id,
-                    hash: "#top",
                   }}
                 >
                   <h2

@@ -5,6 +5,10 @@
   height: 12.69rem;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+.more-container.wait {
+  cursor: wait;
 }
 
 .more {

@@ -57,6 +57,9 @@ export default function App() {
           <Route path="/">
             <Home />
           </Route>
+          {/* <Route path="/about">
+            <About />
+          </Route> */}
         </Switch>
         <footer className="text-light">
           <div></div>
