@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/siat/static/css/main.a9769f21.chunk.css",
-    "main.js": "/siat/static/js/main.7c24b6f8.chunk.js",
-    "main.js.map": "/siat/static/js/main.7c24b6f8.chunk.js.map",
+    "main.js": "/siat/static/js/main.72106b6c.chunk.js",
+    "main.js.map": "/siat/static/js/main.72106b6c.chunk.js.map",
     "runtime-main.js": "/siat/static/js/runtime-main.6111a0e6.js",
     "runtime-main.js.map": "/siat/static/js/runtime-main.6111a0e6.js.map",
     "static/js/2.584c90e1.chunk.js": "/siat/static/js/2.584c90e1.chunk.js",
     "static/js/2.584c90e1.chunk.js.map": "/siat/static/js/2.584c90e1.chunk.js.map",
     "index.html": "/siat/index.html",
-    "precache-manifest.754fd49f0500a597098fd381fb53178e.js": "/siat/precache-manifest.754fd49f0500a597098fd381fb53178e.js",
+    "precache-manifest.0d696609dd90ec4ae6df626db4bf99db.js": "/siat/precache-manifest.0d696609dd90ec4ae6df626db4bf99db.js",
     "service-worker.js": "/siat/service-worker.js",
     "static/css/main.a9769f21.chunk.css.map": "/siat/static/css/main.a9769f21.chunk.css.map",
     "static/js/2.584c90e1.chunk.js.LICENSE.txt": "/siat/static/js/2.584c90e1.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.6111a0e6.js",
     "static/js/2.584c90e1.chunk.js",
     "static/css/main.a9769f21.chunk.css",
-    "static/js/main.7c24b6f8.chunk.js"
+    "static/js/main.72106b6c.chunk.js"
   ]
 }
