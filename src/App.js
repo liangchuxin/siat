@@ -3,6 +3,7 @@ import { withRouter } from "react-router";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Navigation from "./Navigation";
 import Home from "./homePage/Home";
+import About from "./About";
 import Article from "./articlePage/Article";
 import "./App.scss";
 
@@ -54,12 +55,12 @@ export default function App() {
             path="/article/:speciesId"
             render={(props) => <Article {...props} />}
           />
+          <Route path="/about">
+            <About />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
-          {/* <Route path="/about">
-            <About />
-          </Route> */}
         </Switch>
         <footer className="text-light">
           <div></div>

@@ -25,9 +25,12 @@ export default class Article extends React.Component {
 
   componentDidMount() {
     this.setState({ loading: true });
+    var tempPageNumber = this.state.pageNumber;
+    tempPageNumber += 1;
+    this.setState({ pageNumber: tempPageNumber });
     axios
       .get(
-        `http://api.serpstack.com/search?access_key=8869dd9d5c93b9c45044f7776c869198&sort=date&query=illegal+trade+wildlife+${getSpeciesId(
+        `http://api.serpstack.com/search?access_key=fc41a7c4211647b543bc003529fb620a&sort=date&query=illegal+trade+wildlife+${getSpeciesId(
           this.props.match.url
         )}`
       )
@@ -55,7 +58,7 @@ export default class Article extends React.Component {
     });
     axios
       .get(
-        `http://api.serpstack.com/search?access_key=8869dd9d5c93b9c45044f7776c869198&sort=date&query=illegal+trade+wildlife+${getSpeciesId(
+        `http://api.serpstack.com/search?access_key=fc41a7c4211647b543bc003529fb620a&sort=date&query=illegal+trade+wildlife+${getSpeciesId(
           this.props.match.url
         )}
         &page=${this.state.pageNumber}`
@@ -92,6 +95,7 @@ export default class Article extends React.Component {
         />
 
         {this.state.article.map((article) => {
+          console.log(`Article: ${article}`);
           return <ArticleBlock key={article.title} articleInfo={article} />;
         })}
         <div

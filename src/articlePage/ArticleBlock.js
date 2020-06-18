@@ -6,7 +6,7 @@ export default class ArticleBlock extends React.Component {
     super(props);
   }
   componentWillReceiveProps(nextProps) {
-    if (nextProps.articleInfo !== this.props.articleInfo) this.forceUpdate();
+    this.forceUpdate();
   }
   render() {
     return (
