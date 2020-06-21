@@ -12,38 +12,38 @@ export const species = [
     id: "elephant",
     name: "Elephants",
     description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
-    numberLeft: 58,
-    deaths: 63,
+    numberLeft: "40,000",
+    deaths: "20,000",
   },
   {
     id: "bear",
     name: "Bears",
     description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
-    numberLeft: 58,
-    deaths: 63,
+    numberLeft: "200,000",
+    deaths: "700",
   },
   {
     id: "rhino",
     name: "Rhinos",
     description:
       "Rhinos are victims of poaching due to the high demand of their horns both for decoration and the myth of its medical properties. Even though many countries has made this illegal, the high demand for Rhino horns on the black market has risen over the years and this costed countless rhinos their lives",
-    numberLeft: 58,
-    deaths: 63,
+    numberLeft: "27,000",
+    deaths: "318",
   },
   {
     id: "pangolin",
     name: "Pangolins",
     description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
     numberLeft: 58,
-    deaths: 63,
+    deaths: "279,000",
   },
   {
     id: "tiger",
     name: "Tigers",
     description:
       "These territorial and generally solidarity but social predators have once ranged widely in Asia but have lost 93% of their historic range ever since the 20th Century due to the loss of habitats. These large cats’ population have dropped from 100,000 in the 20th century to 3000 in 2015.",
-    numberLeft: 58,
-    deaths: 63,
+    numberLeft: "3,890",
+    deaths: "100+",
   },
 ];
 
