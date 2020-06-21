@@ -33,6 +33,10 @@ export default function Species(props) {
     }
   }
 
+  function cutString(string, length) {
+    return string.slice(0, length) + "...";
+  }
+
   return (
     <div
       className="split split-species"
@@ -49,7 +53,9 @@ export default function Species(props) {
       >
         <div>
           <h2>{props.speciesInfo.name}</h2>
-          <p className="split-description">{props.speciesInfo.description}</p>
+          <p className="split-description">
+            {cutString(props.speciesInfo.description, 75)}
+          </p>
           <div className="small-info">
             <div className="number-left">
               <p className="small-b-number">{props.speciesInfo.numberLeft}</p>

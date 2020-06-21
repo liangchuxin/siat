@@ -8,6 +8,10 @@ import rhinoBg from "../assets/images/rhino-fullwidth.png";
 import panBg from "../assets/images/pangolin-fullwidth.png";
 import tigerBg from "../assets/images/tiger-fullwidth.png";
 
+function cutString(string, length) {
+  return string.slice(0, length) + "...";
+}
+
 export default function FullWidthSpecies(props) {
   function getBgImage(speciesName) {
     switch (speciesName) {
@@ -23,6 +27,7 @@ export default function FullWidthSpecies(props) {
         return tigerBg;
     }
   }
+
   return (
     <div
       className="fullwidth-container"
@@ -32,7 +37,9 @@ export default function FullWidthSpecies(props) {
         <div>
           <h1>{props.speciesInfo.name}</h1>
           <p className="text-regular species-description">
-            {props.speciesInfo.description}
+            {props.readMore
+              ? cutString(props.speciesInfo.description, 180)
+              : props.speciesInfo.description}
           </p>
           {props.readMore && (
             <Link

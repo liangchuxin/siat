@@ -25,7 +25,8 @@ export const species = [
   {
     id: "rhino",
     name: "Rhinos",
-    description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
+    description:
+      "Rhinos are victims of poaching due to the high demand of their horns both for decoration and the myth of its medical properties. Even though many countries has made this illegal, the high demand for Rhino horns on the black market has risen over the years and this costed countless rhinos their lives",
     numberLeft: 58,
     deaths: 63,
   },
@@ -39,7 +40,8 @@ export const species = [
   {
     id: "tiger",
     name: "Tigers",
-    description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
+    description:
+      "These territorial and generally solidarity but social predators have once ranged widely in Asia but have lost 93% of their historic range ever since the 20th Century due to the loss of habitats. These large cats’ population have dropped from 100,000 in the 20th century to 3000 in 2015.",
     numberLeft: 58,
     deaths: 63,
   },
@@ -66,8 +68,8 @@ export default function App() {
           <div></div>
           <div className="footer-icon">ICON</div>
           <div className="footer-details">
-            <div>Copyright © abcd abcdabcd</div>
-            <div>Contact us: +65 8888 8888</div>
+            <div>Copyright © Celia, Fairy, Elyse & Jessica</div>
+            <div>Contact us: liang81077@gapps.uwcsea.edu.sg</div>
           </div>
         </footer>
       </div>

@@ -51,7 +51,7 @@ export default class Navigation extends React.Component {
         <nav className={this.state.isTop ? "up" : "down"}>
           <div>
             <Link to="/#top" className="icon" hash="#top">
-              ICON
+              SIAT
             </Link>
           </div>
           <div>
