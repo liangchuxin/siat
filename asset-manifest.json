@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/siat/static/css/main.a9769f21.chunk.css",
-    "main.js": "/siat/static/js/main.29150cb6.chunk.js",
-    "main.js.map": "/siat/static/js/main.29150cb6.chunk.js.map",
+    "main.css": "/siat/static/css/main.2515fcdc.chunk.css",
+    "main.js": "/siat/static/js/main.0143381d.chunk.js",
+    "main.js.map": "/siat/static/js/main.0143381d.chunk.js.map",
     "runtime-main.js": "/siat/static/js/runtime-main.6111a0e6.js",
     "runtime-main.js.map": "/siat/static/js/runtime-main.6111a0e6.js.map",
     "static/js/2.584c90e1.chunk.js": "/siat/static/js/2.584c90e1.chunk.js",
     "static/js/2.584c90e1.chunk.js.map": "/siat/static/js/2.584c90e1.chunk.js.map",
     "index.html": "/siat/index.html",
-    "precache-manifest.9494f04e5397480a034f272d5564f654.js": "/siat/precache-manifest.9494f04e5397480a034f272d5564f654.js",
+    "precache-manifest.c87a7967a5b5f3ad860a6144a6b2c15d.js": "/siat/precache-manifest.c87a7967a5b5f3ad860a6144a6b2c15d.js",
     "service-worker.js": "/siat/service-worker.js",
-    "static/css/main.a9769f21.chunk.css.map": "/siat/static/css/main.a9769f21.chunk.css.map",
+    "static/css/main.2515fcdc.chunk.css.map": "/siat/static/css/main.2515fcdc.chunk.css.map",
     "static/js/2.584c90e1.chunk.js.LICENSE.txt": "/siat/static/js/2.584c90e1.chunk.js.LICENSE.txt",
     "static/media/DropDown.scss": "/siat/static/media/tiger-fullwidth.e3dcc9d6.png",
     "static/media/bear.png": "/siat/static/media/bear.2195ef89.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.6111a0e6.js",
     "static/js/2.584c90e1.chunk.js",
-    "static/css/main.a9769f21.chunk.css",
-    "static/js/main.29150cb6.chunk.js"
+    "static/css/main.2515fcdc.chunk.css",
+    "static/js/main.0143381d.chunk.js"
   ]
 }
