@@ -31,6 +31,11 @@ const images = [
       "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpn10h23j31640u0783.jpg",
     description: "Shark -- by Elyse",
   },
+  {
+    original: "https://i.loli.net/2020/06/21/uhAIPfXbid8p3Vc.jpg",
+    thumbnail: "https://i.loli.net/2020/06/21/uhAIPfXbid8p3Vc.jpg",
+    Description: "Elephant -- by Jessica",
+  },
 ];
 
 export default function Home() {
