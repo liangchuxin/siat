@@ -66,9 +66,9 @@ export default class Navigation extends React.Component {
               <span className="nav-text">Artwork</span>
             </Link>
             <Link to="/about">
-              <span className="nav-text">About</span>
+              <span className="nav-text donate">About</span>
             </Link>
-            <span className="nav-text donate">Donate</span>
+            {/* <span className="nav-text donate">Donate</span> */}
           </div>
         </nav>
         <DropDown

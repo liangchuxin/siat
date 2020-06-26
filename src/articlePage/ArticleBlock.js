@@ -23,7 +23,7 @@ export default class ArticleBlock extends React.Component {
             </p>
             <p className="extract">{this.props.articleInfo.snippet}</p>
           </div>
-          {/* <img className="thumb" src={props.articleInfo.thumb} /> */}
+          {/* <img className="thumb" src="../assets/images/bg-dark-green.png" /> */}
         </a>
       </div>
     );

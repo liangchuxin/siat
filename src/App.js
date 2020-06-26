@@ -11,14 +11,16 @@ export const species = [
   {
     id: "elephant",
     name: "Elephants",
-    description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
+    description:
+      "Elephants are being poached in large numbers for their tusks. Ivory is highly demanded in the Asian market and it is often carved into ornaments and jewellery. Even though this is banned internationally, ivory trade is highly profitable and is causing the death of 55 elephants every day on average.",
     numberLeft: "40,000",
     deaths: "20,000",
   },
   {
     id: "bear",
     name: "Bears",
-    description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
+    description:
+      "Every year, tens of thousands of black bears are taken by hunters for use in bear bile farming. Since bear bile is known to be useful in treating liver and gall bladder conditions, it is used in some traditional medicines mostly in China, South Korea and Vietnam.",
     numberLeft: "200,000",
     deaths: "700",
   },
@@ -33,8 +35,9 @@ export const species = [
   {
     id: "pangolin",
     name: "Pangolins",
-    description: "Lorem ipsum dolor sit amet, ipsum dolor sit amet.",
-    numberLeft: 58,
+    description:
+      "Pangolins are covered in distinctive scales that ward off predators in the wild, but this makes them the traffickers' targets. Their scales are boiled off their bodies for use in traditional medicine, their meat is a high-end delicacy in China and their blood is seen as a healing tonic.",
+    numberLeft: "N/A",
     deaths: "279,000",
   },
   {
@@ -66,7 +69,9 @@ export default function App() {
         </Switch>
         <footer className="text-light">
           <div></div>
-          <div className="footer-icon">ICON</div>
+          <div className="footer-icon">
+            <img src="https://i.loli.net/2020/06/26/vDi7gSUyqXKcPom.png" />
+          </div>
           <div className="footer-details">
             <div>Copyright © Celia, Fairy, Elyse & Jessica</div>
             <div>Contact us: liang81077@gapps.uwcsea.edu.sg</div>

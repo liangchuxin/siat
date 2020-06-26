@@ -59,13 +59,16 @@ footer {
 
 .footer-icon {
   margin-right: 5.69rem;
-  width: 13.7rem;
+  width: 15rem;
   height: 3.75rem;
-  border: 1px solid $red;
-  color: $red;
+  // border: 1px solid $red;
+  // color: $red;
   text-align: center;
   vertical-align: middle;
   // line-height: 3.75rem;
+  img {
+    width: 100%;
+  }
 }
 
 .footer-details {
