@@ -15,14 +15,14 @@ const images = [
       "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpmiqxprj315j0u07aw.jpg",
     thumbnail:
       "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpmiqxprj315j0u07aw.jpg",
-    description: "Pangolin -- by Elyse",
+    description: "Snake -- by Elyse",
   },
   {
     original:
       "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpmbhr8aj315g0u0q89.jpg",
     thumbnail:
       "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpmbhr8aj315g0u0q89.jpg",
-    description: "Leopard -- by Elyse",
+    description: "Tiger -- by Elyse",
   },
   {
     original:
@@ -30,6 +30,11 @@ const images = [
     thumbnail:
       "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpn10h23j31640u0783.jpg",
     description: "Shark -- by Elyse",
+  },
+  {
+    original: "https://i.loli.net/2020/07/02/iIpjv9wVuSTfGaO.jpg",
+    thumbnail: "https://i.loli.net/2020/07/02/iIpjv9wVuSTfGaO.jpg",
+    Description: "Tiger -- by Jessica",
   },
   {
     original: "https://i.loli.net/2020/06/21/uhAIPfXbid8p3Vc.jpg",
