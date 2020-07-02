@@ -73,7 +73,7 @@ export default function App() {
             <img src="https://i.loli.net/2020/06/26/vDi7gSUyqXKcPom.png" />
           </div>
           <div className="footer-details">
-            <div>Copyright © Celia, Fairy, Elyse & Jessica</div>
+            <div>Copyright © Celia, Elyse, Fairy & Jessica</div>
             <div>Contact us: liang81077@gapps.uwcsea.edu.sg</div>
           </div>
         </footer>

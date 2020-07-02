@@ -12,18 +12,19 @@ import { species } from "../App";
 const images = [
   {
     original:
-      "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpmiqxprj315j0u07aw.jpg",
-    thumbnail:
-      "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpmiqxprj315j0u07aw.jpg",
-    description: "Snake -- by Elyse",
-  },
-  {
-    original:
       "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpmbhr8aj315g0u0q89.jpg",
     thumbnail:
       "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpmbhr8aj315g0u0q89.jpg",
     description: "Tiger -- by Elyse",
   },
+  {
+    original:
+      "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpmiqxprj315j0u07aw.jpg",
+    thumbnail:
+      "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpmiqxprj315j0u07aw.jpg",
+    description: "Snake -- by Elyse",
+  },
+
   {
     original:
       "https://tva1.sinaimg.cn/large/007S8ZIlgy1gfvpn10h23j31640u0783.jpg",
@@ -34,12 +35,12 @@ const images = [
   {
     original: "https://i.loli.net/2020/07/02/iIpjv9wVuSTfGaO.jpg",
     thumbnail: "https://i.loli.net/2020/07/02/iIpjv9wVuSTfGaO.jpg",
-    Description: "Tiger -- by Jessica",
+    description: "Tiger -- by Jessica",
   },
   {
     original: "https://i.loli.net/2020/06/21/uhAIPfXbid8p3Vc.jpg",
     thumbnail: "https://i.loli.net/2020/06/21/uhAIPfXbid8p3Vc.jpg",
-    Description: "Elephant -- by Jessica",
+    description: "Elephant -- by Jessica",
   },
 ];
 
